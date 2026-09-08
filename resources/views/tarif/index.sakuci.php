@@ -4,9 +4,11 @@
 
 @section ('content')
 
+<div class="container">
     <h1>Daftar Tarif</h1>
+    <a href="{{ route('tarif.create') }}" class="btn btn-primary mb-3 btn-sm Tambah Jenis Kendaraan">Tambah Kategori</a>
 
-<table class="table table-striped table-hover">
+    <table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>id_tarif</th>
