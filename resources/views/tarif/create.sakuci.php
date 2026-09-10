@@ -10,6 +10,10 @@
             <label for="jenis_kendaraan">Jenis Kendaraan</label>
             <input type="text" name="jenis_kendaraan" id="jenis_kendaraan" class="form-control" required>
         </div>
+        <div class="form-group mb-3">
+            <label for="tarif_per_jam">Tarif Per Jam</label>
+            <input type="text" name="tarif_per_jam" id="tarif_per_jam" class="form-control" required>
+        </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 

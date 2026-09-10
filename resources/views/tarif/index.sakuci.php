@@ -14,6 +14,7 @@
             <th>id_tarif</th>
             <th>jenis_kendaraan</th>
             <th>tarif_per_jam</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -22,8 +23,12 @@
             <td> {{ $d->id_tarif }} </td>
             <td> {{ $d->jenis_kendaraan }} </td>
             <td> {{ $d->tarif_per_jam }} </td>
-            <td><button class="btn btn-sm btn-success">Edit</button>
-            <button class="btn btn-sm btn-danger">Hapus</button>
+            <td><a href="{{ route('tarif.edit', ['id_tarif' => $d->id_tarif]) }}" class="btn btn-sm btn-success">Edit</a>
+            <form action="{{ route('tarif.destroy', ['id_tarif' => $d->id_tarif]) }}" method="POST" class="d-inline" onsubmit="return confirm('apakah benar akan dihapus?');">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+            </form>
         </td>
         </tr>
         @endforeach

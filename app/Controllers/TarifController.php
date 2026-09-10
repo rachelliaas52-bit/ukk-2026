@@ -32,4 +32,32 @@ class TarifController extends Controller
 
         return redirect()->route('tarif.index')->with('succes', 'jenis kendaraan berhasil ditambahkan.');
     }
+
+    public function edit(Request $request, $id_tarif)
+    {
+        $tarif = tarif::findOrFail($id_tarif);
+        return view('tarif.edit', compact('tarif'));
+    }
+
+    public function update(Request $request, $id_tarif)
+    {
+        $request->validate([
+            'jenis_kendaraan' => 'required|string|max:100',
+        ]);
+
+        $tarif = tarif::findOrFail($id_tarif);
+        $tarif->update([
+            'jenis_kendaraan'=> $request->jenis_kendaraan
+        ]);
+
+        return redirect()->route('tarif.index')->with('success', 'jenis kendaraan berhasil diperbarui.');
+    }
+
+    public function destroy(Request $request, $id_tarif)
+    {
+        $tarif = tarif::findOrFail($id_tarif);
+        $tarif->delete();
+
+        return redirect()->route('tarif.index')->with('success', 'jenis kendaraan berhasil dihapus.');
+    }
 }
