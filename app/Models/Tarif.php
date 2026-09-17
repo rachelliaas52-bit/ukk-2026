@@ -10,5 +10,5 @@ class Tarif extends Model
 
     protected string $primaryKey='id_tarif';
 
-    protected array $fillable = ['id_tarif', 'jenis_kendaraan', 'tarif_per_jam'];
+    protected array $fillable = ['jenis_kendaraan', 'tarif_per_jam'];
 }

@@ -28,6 +28,7 @@ class TarifController extends Controller
 
         tarif::create([
             'jenis_kendaraan' => $request->input('jenis_kendaraan'),
+            'tarif_per_jam' => $request->input('tarif_per_jam'),
         ]);
 
         return redirect()->route('tarif.index')->with('succes', 'jenis kendaraan berhasil ditambahkan.');
