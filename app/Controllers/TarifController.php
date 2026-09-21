@@ -24,6 +24,7 @@ class TarifController extends Controller
     {
         $request->validate([
             'jenis_kendaraan' => 'required|string|max:255',
+            'tarif_per_jam' => 'required',
         ]);
 
         tarif::create([
@@ -44,6 +45,7 @@ class TarifController extends Controller
     {
         $request->validate([
             'jenis_kendaraan' => 'required|string|max:100',
+            'tarif_per_jam' => 'required',
         ]);
 
         $tarif = tarif::findOrFail($id_tarif);

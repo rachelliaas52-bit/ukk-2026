@@ -18,7 +18,7 @@
                     <circle cx="16" cy="16" r="9" fill="{{ $dbConnected ? '#28a745' : '#dc3545' }}"/>
                 </svg>
             </button>
-            <a class="navbar-brand fw-semibold m-0" href="{{ route('home') }}">{{ config('app.name') }}</a>
+            <a class="navbar-brand fw-semibold m-0" href="{{ route('home') }}">Ratuuu</a>
         </div>
 
         <button class="navbar-toggler border-0" type="button"
@@ -32,9 +32,6 @@
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
                 <li class="nav-item">
                     <a class="nav-link {{ is_route('home') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ is_route('tarif.index') ? 'active' : '' }}" href="{{ route('tarif.index') }}">Jenis Kendaraan</a>
                 </li>
                 @php
                     $currentUser = \App\Models\User::current();

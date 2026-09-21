@@ -7,6 +7,7 @@ use App\Controllers\Core\DocsController;
 use App\Controllers\Core\RoleController;
 use App\Controllers\Core\UserController;
 use App\Controllers\TarifController;
+use App\Controllers\MemberController;
 use Sakuci\Route;
 
 /*

@@ -1,12 +1,12 @@
-﻿/*
+/*
 | Lapisan tema di atas Bootstrap.
 | Bootstrap dimuat lebih dulu, file ini hanya menimpa seperlunya.
 */
 
 :root {
-    --brand: #c2410c;
-    --brand-dark: #9a3412;
-    --brand-subtle: #fff7ed;
+    --brand: #6B8E7B;
+    --brand-dark: #52705F;
+    --brand-subtle: #EEF4F0;
 }
 
 body {
@@ -240,14 +240,14 @@ code.inline {
 [data-bs-theme="dark"] .badge-brand,
 [data-bs-theme="dark"] .bg-brand-subtle,
 [data-bs-theme="dark"] .step-number {
-    background-color: rgba(194, 65, 12, .18) !important;
-    color: #fb923c;
+    background-color: rgba(107, 142, 123, .18) !important;
+    color: #9BB5A5;
 }
 
 [data-bs-theme="dark"] .demo-box {
-    background-color: rgba(194, 65, 12, .18);
-    border-color: rgba(194, 65, 12, .4);
-    color: #fb923c;
+    background-color: rgba(107, 142, 123, .18);
+    border-color: rgba(107, 142, 123, .4);
+    color: #9BB5A5;
 }
 
 [data-bs-theme="dark"] .demo-box-alt {
@@ -255,4 +255,4 @@ code.inline {
     border-color: rgba(99, 102, 241, .4);
     color: #a5b4fc;
 }
-
+ 
